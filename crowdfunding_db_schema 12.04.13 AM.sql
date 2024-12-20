@@ -16,7 +16,6 @@ CREATE TABLE "campaigns" (
   "category_id" varchar(10),
   "subcategory_id" varchar(10)
 );
-SELECT * FROM "campaigns"
 
 CREATE TABLE "contacts" (
   "contact_id" int PRIMARY KEY,
@@ -25,22 +24,15 @@ CREATE TABLE "contacts" (
   "email" varchar(255)
 );
 
-SELECT * FROM "contacts"
-
 CREATE TABLE "categories" (
   "category_id" varchar(10) PRIMARY KEY,
   "category_name" varchar(100)
 );
 
-SELECT * FROM "categories"
-
-
 CREATE TABLE "subcategories" (
   "subcategory_id" varchar(10) PRIMARY KEY,
   "subcategory_name" varchar(100)
 );
-
-SELECT * FROM "subcategories"
 
 ALTER TABLE "campaigns" ADD FOREIGN KEY ("contact_id") REFERENCES "contacts" ("contact_id");
 
